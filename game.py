@@ -1,5 +1,27 @@
 from sys import exit
 
+def guard():
+	print "You found the source of the noises."
+	print "A guard enjoying himself on some crystal meth."
+	print "You can either leave the guard or kill him?"
+
+	choice = raw_input ("> ")
+	if choice == "Leave":
+		perimeter()
+	elif choice == Kill:
+		print "After killing the guard you find a stack of gold."
+		print "Do you take any gold?"
+
+		choice = raw_input ("> ")
+		if choice == "yes":
+			print "Greed. :( but I guess you have to survive."
+			trapped()
+		elif choice ==
+
+def Loser_ending():
+	print "Traitors and cowards always die."
+	exit(0)
+
 def mad_scientist():
 	print "You pick up a blade."
 	print "A deep urge picks up within you to kill this woman."
@@ -7,7 +29,14 @@ def mad_scientist():
 
 	choice  = raw_input ("> ")
 	if choice == "Nazi":
-		print
+		print "She turns. Suddenly she shoots you."
+		Loser_ending()
+	elif choice == "Kill":
+		print "After a short brutal fight you pierce her throat."
+		gate_house()
+	else:
+		print "Hurry up or die already."
+		mad_scientist()
 
 def happy_ending():
 	print "You survive until 1982 after a falling off a boat in the Atlantic."
