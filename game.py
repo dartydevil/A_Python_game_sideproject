@@ -1,5 +1,16 @@
 from sys import exit
 
+def how():
+	choice = raw_input("> ")
+	if "0" in choice or "1" in choice:
+		how_much = int(choice)
+	else:
+		print "Separate those numbers from letters. Numbers only."
+		if how_much < 100:
+			print "Greedy. Get some decent manners with that gold."
+		elif how_much = 1:
+			print ""
+
 def guard():
 	print "You found the source of the noises."
 	print "A guard enjoying himself on some crystal meth."
@@ -11,12 +22,21 @@ def guard():
 	elif choice == Kill:
 		print "After killing the guard you find a stack of gold."
 		print "Do you take any gold?"
-
 		choice = raw_input ("> ")
-		if choice == "yes":
+		if choice == "Yes":
 			print "Greed. :( but I guess you have to survive."
+			print "How much did you take?"
+			how()
+		elif choice == "No":
+			print "Surprising!"
 			trapped()
-		elif choice ==
+		elif choice == "Some":
+			print "I bet quite a bit how much?"
+			how()
+		else:
+			print "Can you repeat that? You were mumbling."
+	else:
+		dead("The guard lifts the alarm about your escape.")
 
 def Loser_ending():
 	print "Traitors and cowards always die."
