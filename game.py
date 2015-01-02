@@ -1,5 +1,27 @@
 from sys import exit
 
+def mad_scientist():
+	print "You pick up a blade."
+	print "A deep urge picks up within you to kill this woman."
+	print "Do you tell the woman your a Nazi or kill her?"
+
+	choice  = raw_input ("> ")
+	if choice == "Nazi":
+		print
+
+def happy_ending():
+	print "You survive until 1982 after a falling off a boat in the Atlantic."
+	exit(0)
+
+def SIS():
+	print "Outside this cut you find some agents of SIS."
+	print "They offer immunity in Britain if you join their nuclear programme."
+	happy_ending()
+
+def perimeter():
+	print "You find a precut section in the fence curious you head through it."
+	SIS()
+
 def gate_house():
 	print "You enter the gate house of this prison to find it empty."
 	print "The sound of clapping is faintly heard."
@@ -11,7 +33,7 @@ def gate_house():
 	elif choice == "Explore":
 		guard()
 	else:
-
+		dead("You are found a patrol and sentenced to death.")
 
 def snake_2():
 	print "You accepted my challenge."
@@ -67,6 +89,7 @@ def fire():
 
 def dead(why):
 	print why, "That run was quite a disappointment."
+	start()
 
 def start():
 	print "Welcome to the infamous Nazi prison Bavarian Munich Camp."
