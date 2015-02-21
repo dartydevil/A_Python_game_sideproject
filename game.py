@@ -1,5 +1,27 @@
 from sys import exit
 
+name = raw_input ("What is your name?")
+print "So you are %r." % (name)
+print "Is it right that you are %r?" % (name)
+choice = raw_input ("> ")
+if choice == "yes":
+	print "Ok %r let's play." % (name)
+elif choice == "no":
+	name = raw_input ("So what is your name?")
+	print "Is it right that you are %r?" % (name)
+	choice = raw_input ("> ")
+	if choice == "yes":
+		print "Ok %r let's play." % (name)
+		start()
+	elif choice == "no":
+		name = raw_input ("So what is your name?")
+		print "I'm bored of this bye."
+		exit(0)
+	else:
+		print "Please repeat that."
+else:
+	print "Please repeat that."
+
 def how():
 	choice = raw_input("> ")
 	if "0" in choice or "1" in choice:
@@ -8,8 +30,9 @@ def how():
 		print "Separate those numbers from letters. Numbers only."
 		if how_much < 100:
 			print "Greedy. Get some decent manners with that gold."
-		elif how_much = 1:
-			print ""
+			trapped()
+		elif how_much == 1:
+			print "You are quite a unusual person."
 
 def guard():
 	print "You found the source of the noises."
@@ -101,7 +124,7 @@ def snake_2():
 		print "Well done the prisoner congratulates you. Moving aside for you to pass."
 		gate_house()
 	else:
-		dead(The prisoner straggles you to death.)
+		dead("The prisoner straggles you to death.")
 
 def snake():
 	print "Another prisoner is up ahead."
@@ -155,4 +178,3 @@ def start():
 		fire()
 	else:
 		dead("The Reich had high hopes for your escape.")
-start()
