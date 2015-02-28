@@ -1,29 +1,10 @@
 from sys import exit
 
-name = raw_input ("What is your name?")
-print "So you are %r." % (name)
-print "Is it right that you are %r?" % (name)
-choice = raw_input ("> ")
-if choice == "yes":
-	print "Ok %r let's play." % (name)
-elif choice == "no":
-	name = raw_input ("So what is your name?")
-	print "Is it right that you are %r?" % (name)
-	choice = raw_input ("> ")
-	if choice == "yes":
-		print "Ok %r let's play." % (name)
-		start()
-	elif choice == "no":
-		name = raw_input ("So what is your name?")
-		print "I'm bored of this bye."
-		exit(0)
-	else:
-		print "Please repeat that."
-else:
-	print "Please repeat that."
 
 def how():
+
 	choice = raw_input("> ")
+
 	if "0" in choice or "1" in choice:
 		how_much = int(choice)
 	else:
@@ -34,12 +15,30 @@ def how():
 		elif how_much == 1:
 			print "You are quite a unusual person."
 
+def start():
+		print "Welcome to the infamous Nazi prison Bavarian Munich Camp."
+		print """
+		You have been brought here as a spy against the mighty 1000 year Reich.
+		Upon arrival you are situated in a unlocked room.
+		Do you leave or wait?
+		"""
+
+		choice = raw_input ("> ")
+	
+		if choice == "Leave":
+			mad_scientist()
+		elif choice == "Wait":
+			fire()
+		else:
+			dead("The Reich had high hopes for your escape.")
+
 def guard():
 	print "You found the source of the noises."
 	print "A guard enjoying himself on some crystal meth."
 	print "You can either leave the guard or kill him?"
 
 	choice = raw_input ("> ")
+
 	if choice == "Leave":
 		perimeter()
 	elif choice == Kill:
@@ -71,6 +70,7 @@ def mad_scientist():
 	print "Do you tell the woman your a Nazi or kill her?"
 
 	choice  = raw_input ("> ")
+
 	if choice == "Nazi":
 		print "She turns. Suddenly she shoots you."
 		Loser_ending()
@@ -100,6 +100,7 @@ def gate_house():
 	print "Do you leave this prison or explore the noises?"
 
 	choice = raw_input ("> ")
+
 	if choice == "Leave":
 		perimeter()
 	elif choice == "Explore":
@@ -116,10 +117,11 @@ def snake_2():
 	Silver-tongued, but never lie.
 	Double-winged, but never fly.
 	Air-cooled, but never dry.
-
 	What am I?
 	"""
+
 	choice = raw_input ("> ")
+
 	if choice == "Mercury":
 		print "Well done the prisoner congratulates you. Moving aside for you to pass."
 		gate_house()
@@ -132,10 +134,11 @@ def snake():
 	print "He turns slowly."
 	print "If you can successfully answer my riddle you can pass."
 	print "Or ..... I kill you."
-	print "Retorted the prisoner towards you."
+	print "Retorted, the prisoner towards you."
 	print "Do you accept the challenge or run?"
 
 	choice = raw_input ("> ")
+
 	if choice == "Accept":
 		snake_2()
 	elif choice == "Run":
@@ -152,6 +155,7 @@ def fire():
 	You can either run or attempt to put out the flames.
 	"""
 	choice = raw_input ("> ")
+
 	if choice == "Run":
 		snake()
 	elif choice == "Attempt":
@@ -163,18 +167,28 @@ def dead(why):
 	print why, "That run was quite a disappointment."
 	start()
 
-def start():
-	print "Welcome to the infamous Nazi prison Bavarian Munich Camp."
-	print """
-	You have been brought here as a spy against the mighty 1000 year Reich.
-	Upon arrival you are situated in a unlocked room.
-	Do you leave or wait?
-	"""
 
+name = raw_input ("What is your name?")
+print "So you are %r." % (name)
+print "Is it right that you are %r?" % (name)
+choice = raw_input ("> ")
+
+if choice == "yes":
+	print "Ok %r let's play." % (name)
+	start()
+elif choice == "no":
+	name = raw_input ("So what is your name?")
+	print "Is it right that you are %r?" % (name)
 	choice = raw_input ("> ")
-	if choice == "Leave":
-		mad_scientist()
-	elif choice == "Wait":
-		fire()
+
+	if choice == "yes":
+		print "Ok %r let's play." % (name)
+		start(0)
+	elif choice == "no":
+		name = raw_input ("So what is your name?")
+		print "I'm bored of this bye."
+		exit(0)
 	else:
-		dead("The Reich had high hopes for your escape.")
+		print "Please repeat that."
+else:
+	print "Don't type gibberish."
