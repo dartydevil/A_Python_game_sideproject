@@ -66,6 +66,8 @@ def Loser_ending():
 
 def mad_scientist():
 	print "You pick up a blade."
+	print "You enter a room within the room .."
+	print "A woman is sitting on a stool facing the wall."
 	print "A deep urge picks up within you to kill this woman."
 	print "Do you tell the woman your a Nazi or kill her?"
 
@@ -192,3 +194,19 @@ elif choice == "no":
 		print "Please repeat that."
 else:
 	print "Don't type gibberish."
+elif name = "Daisy":
+	print "Welcome to Ultimate Mode"
+	print "You have been slected to murder Herr Hitler"
+	print "Do you accept this challenge?"
+
+	choice = raw_input ("> ")
+
+	if choice == "yes":
+		print "Let us leave Daisy"
+	elif choice == "Table":
+		print "Jake has murdered you be warned."
+		print "He who threats the dev on PC dies."
+		exit()
+	else choice == "no":
+		print "Go back to your triple A lovers then"
+		exit()
