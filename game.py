@@ -169,32 +169,7 @@ def dead(why):
 	print why, "That run was quite a disappointment."
 	start()
 
-
-name = raw_input ("What is your name?")
-print "So you are %r." % (name)
-print "Is it right that you are %r?" % (name)
-choice = raw_input ("> ")
-
-if choice == "yes":
-	print "Ok %r let's play." % (name)
-	start()
-elif choice == "no":
-	name = raw_input ("So what is your name?")
-	print "Is it right that you are %r?" % (name)
-	choice = raw_input ("> ")
-
-	if choice == "yes":
-		print "Ok %r let's play." % (name)
-		start(0)
-	elif choice == "no":
-		name = raw_input ("So what is your name?")
-		print "I'm bored of this bye."
-		exit(0)
-	else:
-		print "Please repeat that."
-else:
-	print "Don't type gibberish."
-elif name = "Daisy":
+def secret():
 	print "Welcome to Ultimate Mode"
 	print "You have been slected to murder Herr Hitler"
 	print "Do you accept this challenge?"
@@ -203,10 +178,45 @@ elif name = "Daisy":
 
 	if choice == "yes":
 		print "Let us leave Daisy"
+		exit(0);
 	elif choice == "Table":
 		print "Jake has murdered you be warned."
 		print "He who threats the dev on PC dies."
-		exit()
-	else choice == "no":
+		exit(0);
+	elif choice == "no":
 		print "Go back to your triple A lovers then"
-		exit()
+		exit(0);
+	else :
+		secret(0);
+
+def confirm():
+	if choice == "yes":
+		print "Ok %r let's play." % (name)
+	start()
+	elif choice == "no":
+		name = raw_input ("So what is your name?")
+		print "Is it right that you are %r?" % (name)
+		choice = raw_input ("> ")
+
+		if choice == "yes":
+			print "Ok %r let's play." % (name)
+			start(0)
+		elif choice == "no":
+			name = raw_input ("So what is your name?")
+			print "I'm bored of this bye."
+			exit(0)
+		else:
+			print "Please repeat that."
+	else:
+		print "Don't type gibberish."
+
+name = raw_input ("What is your name?")
+if name == "Daisy":
+	secret()
+else: 
+	print "So you are %r." % (name)
+	print "Is it right that you are %r?" % (name)
+	choice = raw_input ("> ")
+	confirm()
+
+
