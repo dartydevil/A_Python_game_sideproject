@@ -179,15 +179,13 @@ def secret():
 	if choice == "yes":
 		print "Let us leave Daisy"
 		exit(0);
-	elif choice == "Table":
+	elif choice == "table":
 		print "Jake has murdered you be warned."
 		print "He who threats the dev on PC dies."
 		exit(0);
-	elif choice == "no":
+	else choice == "no":
 		print "Go back to your triple A lovers then"
 		exit(0);
-	else :
-		secret(0);
 
 def confirm():
 	if choice == "yes":
@@ -211,6 +209,7 @@ def confirm():
 		print "Don't type gibberish."
 
 name = raw_input ("What is your name?")
+
 if name == "Daisy":
 	secret()
 else: 
@@ -218,5 +217,3 @@ else:
 	print "Is it right that you are %r?" % (name)
 	choice = raw_input ("> ")
 	confirm()
-
-
